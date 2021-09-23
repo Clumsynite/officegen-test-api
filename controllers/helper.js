@@ -290,19 +290,19 @@ const getJsonForCreditNoteDocx = (creditNote) => {
         opts: { sz: "16", b: true, align: "center" },
       },
     ]);
-    // fs.writeFileSync("creditNoteTable.json", JSON.stringify(creditNoteTable, null, 2));
 
     const data = [
       {
         type: "text",
         val: "Credit Note",
-        opt: { bold: true, font_size: 16 },
+        opt: { bold: true, font_size: 14 },
         lopt: { align: "center" },
       },
       { type: "table", val: detailsTable, opt: tableStyle },
-      { type: "linebreak" },
-      // { type: "table", val: [tableHeading], opt: { ...tableStyle, tableColor: "525353" } },
+      { type: "text", val: "" },
       { type: "table", val: creditNoteTable, opt: tableStyle },
+      { type: "text", val: "" },
+      { type: "text", val: "Notes/Terms:", opt: { font_size: 8, italic: true } },
     ];
 
     return data;

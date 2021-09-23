@@ -10,26 +10,75 @@ const download = async (req, res) => {
       "Content-Type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
       "Content-disposition": "attachment; filename=surprise.pptx",
     });
-    const data = getJsonForCreditNoteDocx(creditNote);
+    const data = getJsonForCreditNoteDocx(creditNote); // page - 1
 
     const docx = officegen({
       type: "docx",
       orientation: "portrait",
       pageMargins: {
-        top: 500,
-        left: 500,
-        bottom: 500,
-        right: 500,
+        top: 400,
+        left: 400,
+        bottom: 400,
+        right: 400,
       },
     });
 
     docx.on("error", (e) => console.log(e));
     docx.createByJson(data);
-    // fs.writeFileSync("./data.json", JSON.stringify(data, null, 2));
-    // Async call to generate the output file:
+    const terms = [
+      "Please deduct this amount from the Original Invoice No. stated above.",
+      "This is part of a consolidated invoice of accounts receivable due to Fefifo, the exclusively authorised agent for Agropreneurs (sellers).",
+      "All payments collected are on behalf of respective Agropreneurs (sellers) for crops produced and received by the buyer.",
+      "Breakdown of participating Agropreneurs (sellers) for this sales rejects breakdown enclosed hereafter.",
+      "Payment made by bank transfer, please quote our original invoice no. and email the bank slip after payment.",
+    ];
+    terms.forEach((term) => {
+      const p = docx.createListOfDots({ border: "single" });
+      p.addText(term, { font_size: 8, italic: true });
+    });
+
+    docx.createP().addText("Please make payment by bank transfer to the following:", { font_size: 18 });
+    const table = [
+      [
+        { val: "Bank Acct Name: Fefifo Malaysia Sdn Bhd", opts: { cellColWidth: 10000, sz: 18 } },
+        { val: "Bank Acct No.: 8010169358", opts: { cellColWidth: 10000, sz: 18 } },
+      ],
+      [
+        { val: "Bank Name: CIMB Bank Berhad", opts: { sz: 18 } },
+        { val: "Swift Code: CIBBMYKL", opts: { sz: 18 } },
+      ],
+    ];
+    docx.createTable(table, {
+      borders: false,
+      tableFontFamily: "Calibri",
+      tableSize: 10,
+      align: "left",
+      tableAlign: "left",
+    });
+    docx.createP();
+    docx.createTable(
+      [
+        [{ val: "Thank you,", opts: { cellColWidth: 10000, sz: 18 } }],
+        [
+          { val: "FEFIFO MALAYSIA SDN BHD ", opts: { cellColWidth: 10000, sz: 18, b: true } },
+          { val: "This is system generated. No signature required.", opts: { cellColWidth: 10000, sz: 18 } },
+        ],
+      ],
+      {
+        borders: false,
+        tableFontFamily: "Calibri",
+        tableSize: 10,
+        align: "left",
+        tableAlign: "left",
+      }
+    );
+    docx.putPageBreak();
+
+    // TODO
+    // sales rejects breakdown
+
     setHeaderAndFooter(docx);
     return docx.generate(res);
-    // return res.json({ success: true });
   } catch (error) {
     console.log(error);
     return res.json({ error: true, success: false, message: error.message });
@@ -45,6 +94,8 @@ const setHeaderAndFooter = (docx) => {
   // header.addText(
   //   "Fefifo Malaysia Sdn Bhd\n64-3, Jalan 27/70a\nDesa Sri Hartamas\n50480 Kuala Lumpur, Malaysia\nCompany No. 834529-T"
   // );
+  const footer = docx.getFooter().createP();
+  footer.addText("Fefifo Malaysia Sdn Bhd");
   return docx;
 };
 
