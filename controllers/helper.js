@@ -1,4 +1,4 @@
-const { LOGO } = require("./constants");
+const fs = require("fs");
 
 const getDetailsTable = (data) => [
   [
@@ -182,6 +182,7 @@ const tableRow = (index, desc, qty, unit, price, amount) => {
   ];
 };
 
+// PAGE 1
 const getJsonForCreditNoteDocx = (creditNote) => {
   try {
     const detailsTable = getDetailsTable(creditNote);
@@ -311,4 +312,73 @@ const getJsonForCreditNoteDocx = (creditNote) => {
   }
 };
 
-module.exports = { getJsonForCreditNoteDocx };
+const harvestRow = (harvest) => {
+  const opts = {
+    sz: "16",
+    vAlign: "center",
+    align: "center",
+  };
+  return [
+    {
+      val: `${harvest.agroProfile.name.fullName}\r
+      ${harvest.agroProfile.code}\r
+      ${harvest.agroProfile.assignedCropPlotCode}\r
+      ${harvest.agroProfile.assignedCropModelCode}
+    `,
+      opts: { ...opts, align: "left" },
+    },
+    {
+      val: `Cycle: ${harvest.cycleNo}\r
+    Section: ${harvest.sectionNo}\r
+    Harvest: ${harvest.harvestPeriod}`,
+      opts: { ...opts, align: "left" },
+    },
+    { val: `${harvest.gradeAYield} kg`, opts: { ...opts } },
+    { val: `${harvest.nonGradeAYield} kg`, opts: { ...opts } },
+    { val: `${harvest.gradeArejectAmt || 0} kg`, opts: { ...opts } },
+    { val: `${harvest.nonGradeArejectAmt || 0} kg`, opts: { ...opts } },
+  ];
+};
+
+const getJSONForSalesRejectsBreakdown = (creditNote) => {
+  const tableHeading = [
+    { val: "", opts: { cellColWidth: 20000 } },
+    { val: "", opts: { cellColWidth: 7000 } },
+    { val: "", opts: { cellColWidth: 7000 } },
+    { val: "", opts: { cellColWidth: 7000 } },
+    { val: "", opts: { cellColWidth: 7000 } },
+    { val: "", opts: { cellColWidth: 7000 } },
+  ];
+  const rejectsTable = [tableHeading];
+  const opts = {
+    sz: "16",
+  };
+  const rejectsLabel = [{ val: "Assigned Rejects", opts: { ...opts } }];
+  const labeledHeading = [
+    { val: "", opts: { ...opts } },
+    { val: "Harvest Details", opts: { ...opts, b: true } },
+    { val: "Grade A Yield", opts: { ...opts, b: true } },
+    { val: "Non-Grade A Yield", opts: { ...opts, b: true } },
+    { val: "Grade A Reject", opts: { ...opts, b: true } },
+    { val: "Non-Grade A Reject", opts: { ...opts, b: true } },
+  ];
+  for (let i = 0; i < creditNote.deliveryDetails.length; i++) {
+    const cropModel = creditNote.deliveryDetails[i];
+    const heading = [{ val: cropModel.cropModelCode, opts: { gridSpan: 6, sz: "18", b: true, align: "left" } }];
+    rejectsTable.push(heading);
+
+    for (let harvest of cropModel.harvestPeriods) {
+      rejectsTable.push(rejectsLabel);
+      rejectsTable.push(labeledHeading);
+      rejectsTable.push(harvestRow(harvest));
+    }
+  }
+
+  const data = [
+    { type: "text", val: "SALES REJECTS BREAKDOWN", opt: { bold: true, font_size: 14 }, lopt: { align: "center" } },
+    { type: "table", val: rejectsTable, opt: { borders: false } },
+  ];
+  return data;
+};
+
+module.exports = { getJsonForCreditNoteDocx, getJSONForSalesRejectsBreakdown };

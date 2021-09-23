@@ -1,7 +1,7 @@
 const fs = require("fs");
 const officegen = require("officegen");
 const { LOGO } = require("./constants");
-const { getJsonForCreditNoteDocx } = require("./helper");
+const { getJsonForCreditNoteDocx, getJSONForSalesRejectsBreakdown } = require("./helper");
 
 const download = async (req, res) => {
   try {
@@ -37,24 +37,42 @@ const download = async (req, res) => {
       p.addText(term, { font_size: 8, italic: true });
     });
 
-    docx.createP().addText("Please make payment by bank transfer to the following:", { font_size: 18 });
+    const tableStyle = {
+      borders: false,
+      tableFontFamily: "Calibri",
+      tableSize: 10,
+      align: "left",
+      tableAlign: "left",
+    };
+    // docx.createP().addText({ font_size: 14 });
     const table = [
       [
-        { val: "Bank Acct Name: Fefifo Malaysia Sdn Bhd", opts: { cellColWidth: 10000, sz: 18 } },
-        { val: "Bank Acct No.: 8010169358", opts: { cellColWidth: 10000, sz: 18 } },
+        {
+          val: "",
+          opts: { font_size: 14, bold: true, cellColWidth: 10000 },
+        },
+        {
+          val: "",
+          opts: { font_size: 14, bold: true, cellColWidth: 10000 },
+        },
+      ],
+      [
+        {
+          val: "Please make payment by bank transfer to the following:",
+          opts: { sz: 18, bold: true, gridSpan: 2 },
+        },
+      ],
+      [
+        { val: "Bank Acct Name: Fefifo Malaysia Sdn Bhd", opts: { sz: 18 } },
+        { val: "Bank Acct No.: 8010169358", opts: { sz: 18 } },
       ],
       [
         { val: "Bank Name: CIMB Bank Berhad", opts: { sz: 18 } },
         { val: "Swift Code: CIBBMYKL", opts: { sz: 18 } },
       ],
     ];
-    docx.createTable(table, {
-      borders: false,
-      tableFontFamily: "Calibri",
-      tableSize: 10,
-      align: "left",
-      tableAlign: "left",
-    });
+    docx.createP();
+    docx.createTable(table, tableStyle);
     docx.createP();
     docx.createTable(
       [
@@ -76,6 +94,8 @@ const download = async (req, res) => {
 
     // TODO
     // sales rejects breakdown
+    const saleRejectsBreakDown = getJSONForSalesRejectsBreakdown(creditNote); // page - 2
+    docx.createByJson(saleRejectsBreakDown);
 
     setHeaderAndFooter(docx);
     return docx.generate(res);
