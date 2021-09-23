@@ -1,0 +1,412 @@
+[
+  [
+    {
+      "val": "S/N",
+      "opts": {
+        "b": true,
+        "sz": "18",
+        "color": "ffffff",
+        "shd": {
+          "fill": "000000",
+          "themeFill": "text1",
+          "themeFillTint": "99"
+        },
+        "fontFamily": "Arial",
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "Description",
+      "opts": {
+        "b": true,
+        "sz": "18",
+        "color": "ffffff",
+        "shd": {
+          "fill": "000000",
+          "themeFill": "text1",
+          "themeFillTint": "99"
+        },
+        "fontFamily": "Arial",
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": "Qty",
+      "opts": {
+        "b": true,
+        "sz": "18",
+        "color": "ffffff",
+        "shd": {
+          "fill": "000000",
+          "themeFill": "text1",
+          "themeFillTint": "99"
+        },
+        "fontFamily": "Arial",
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "UOM",
+      "opts": {
+        "b": true,
+        "sz": "18",
+        "color": "ffffff",
+        "shd": {
+          "fill": "000000",
+          "themeFill": "text1",
+          "themeFillTint": "99"
+        },
+        "fontFamily": "Arial",
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "U/Price (MYR)",
+      "opts": {
+        "b": true,
+        "sz": "18",
+        "color": "ffffff",
+        "shd": {
+          "fill": "000000",
+          "themeFill": "text1",
+          "themeFillTint": "99"
+        },
+        "fontFamily": "Arial",
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "Amount (MYR)",
+      "opts": {
+        "b": true,
+        "sz": "18",
+        "color": "ffffff",
+        "shd": {
+          "fill": "000000",
+          "themeFill": "text1",
+          "themeFillTint": "99"
+        },
+        "fontFamily": "Arial",
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": "MY-Chili-Saka-651-MOD1",
+      "opts": {
+        "cellColWidth": 20000
+      }
+    }
+  ],
+  [
+    {
+      "val": 1,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "[Crop Type] [Seed Variant] - Grade A (Contracted)",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "7.5",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": 2,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "[Crop Type] [Seed Variant] - Grade A (Uncontracted)",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 100,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "7.5",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 750,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": 3,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "[Crop Type] [Seed Variant] - Non Grade A",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 100,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "6.00",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 600,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": 4,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "Applicable Commission",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 200,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 40,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": "MY-Chili-Saka-651-MOD3",
+      "opts": {
+        "cellColWidth": 20000
+      }
+    }
+  ],
+  [
+    {
+      "val": 1,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "[Crop Type] [Seed Variant] - Grade A (Contracted)",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "7.5",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": 2,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "[Crop Type] [Seed Variant] - Grade A (Uncontracted)",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "7.5",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": 3,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "[Crop Type] [Seed Variant] - Non Grade A",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": "6.00",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ],
+  [
+    {
+      "val": 4,
+      "opts": {
+        "cellColWidth": 2000
+      }
+    },
+    {
+      "val": "Applicable Commission",
+      "opts": {
+        "cellColWidth": 10000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 700
+      }
+    },
+    {
+      "val": "kg",
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "opts": {
+        "cellColWidth": 7000
+      }
+    },
+    {
+      "val": 0,
+      "opts": {
+        "cellColWidth": 7000
+      }
+    }
+  ]
+]

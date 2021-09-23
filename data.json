@@ -1,0 +1,598 @@
+[
+  {
+    "type": "text",
+    "val": "Credit Note",
+    "opt": {
+      "bold": true,
+      "font_size": 16
+    },
+    "lopt": {
+      "align": "center"
+    }
+  },
+  {
+    "type": "table",
+    "val": [
+      [
+        {
+          "val": "Credit Note:.",
+          "opts": {
+            "cellColWidth": 5000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "CN-SalesBatch15092021_14091349",
+          "opts": {
+            "cellColWidth": 10000,
+            "align": "left",
+            "sz": "16"
+          }
+        },
+        {
+          "val": "Issue Date:",
+          "opts": {
+            "cellColWidth": 5000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "21 September 2021",
+          "opts": {
+            "cellColWidth": 10000,
+            "align": "left",
+            "sz": "16"
+          }
+        }
+      ],
+      [
+        {
+          "val": "Bill To:",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "Life Line Lab Sdn Bhd",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "sz": "16"
+          }
+        },
+        {
+          "val": "Original Invoice No.:",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "SI-SalesBatch15092021_14091349",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "sz": "16"
+          }
+        }
+      ],
+      [
+        {
+          "val": "Attn:",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "Aneesha",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "sz": "16",
+            "b": true
+          }
+        },
+        {
+          "val": "Original Invoice Date:",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "21 September 2021",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "sz": "16"
+          }
+        }
+      ],
+      [
+        {
+          "val": "Contact",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "+173777702",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "sz": "16"
+          }
+        },
+        {
+          "val": "Buyer's Ref.:",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "b": true,
+            "sz": "16"
+          }
+        },
+        {
+          "val": "",
+          "opts": {
+            "cellColWidth": 7000,
+            "align": "left",
+            "sz": "16"
+          }
+        }
+      ]
+    ],
+    "opt": {
+      "tableColWidth": 20000,
+      "align": "left",
+      "tableSize": 24,
+      "tableAlign": "left",
+      "borders": true,
+      "tableFontFamily": "Calibri"
+    }
+  },
+  {
+    "type": "linebreak"
+  },
+  {
+    "type": "table",
+    "val": [
+      [
+        {
+          "val": "S/N",
+          "opts": {
+            "b": true,
+            "sz": "18",
+            "color": "ffffff",
+            "shd": {
+              "fill": "000000",
+              "themeFill": "text1",
+              "themeFillTint": "99"
+            },
+            "fontFamily": "Arial",
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "Description",
+          "opts": {
+            "b": true,
+            "sz": "18",
+            "color": "ffffff",
+            "shd": {
+              "fill": "000000",
+              "themeFill": "text1",
+              "themeFillTint": "99"
+            },
+            "fontFamily": "Arial",
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": "Qty",
+          "opts": {
+            "b": true,
+            "sz": "18",
+            "color": "ffffff",
+            "shd": {
+              "fill": "000000",
+              "themeFill": "text1",
+              "themeFillTint": "99"
+            },
+            "fontFamily": "Arial",
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "UOM",
+          "opts": {
+            "b": true,
+            "sz": "18",
+            "color": "ffffff",
+            "shd": {
+              "fill": "000000",
+              "themeFill": "text1",
+              "themeFillTint": "99"
+            },
+            "fontFamily": "Arial",
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "U/Price (MYR)",
+          "opts": {
+            "b": true,
+            "sz": "18",
+            "color": "ffffff",
+            "shd": {
+              "fill": "000000",
+              "themeFill": "text1",
+              "themeFillTint": "99"
+            },
+            "fontFamily": "Arial",
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "Amount (MYR)",
+          "opts": {
+            "b": true,
+            "sz": "18",
+            "color": "ffffff",
+            "shd": {
+              "fill": "000000",
+              "themeFill": "text1",
+              "themeFillTint": "99"
+            },
+            "fontFamily": "Arial",
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": "MY-Chili-Saka-651-MOD1",
+          "opts": {
+            "cellColWidth": 20000
+          }
+        }
+      ],
+      [
+        {
+          "val": 1,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "[Crop Type] [Seed Variant] - Grade A (Contracted)",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "7.5",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": 2,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "[Crop Type] [Seed Variant] - Grade A (Uncontracted)",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 100,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "7.5",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 750,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": 3,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "[Crop Type] [Seed Variant] - Non Grade A",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 100,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "6.00",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 600,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": 4,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "Applicable Commission",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 200,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 40,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": "MY-Chili-Saka-651-MOD3",
+          "opts": {
+            "cellColWidth": 20000
+          }
+        }
+      ],
+      [
+        {
+          "val": 1,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "[Crop Type] [Seed Variant] - Grade A (Contracted)",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "7.5",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": 2,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "[Crop Type] [Seed Variant] - Grade A (Uncontracted)",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "7.5",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": 3,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "[Crop Type] [Seed Variant] - Non Grade A",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": "6.00",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ],
+      [
+        {
+          "val": 4,
+          "opts": {
+            "cellColWidth": 2000
+          }
+        },
+        {
+          "val": "Applicable Commission",
+          "opts": {
+            "cellColWidth": 10000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 700
+          }
+        },
+        {
+          "val": "kg",
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "opts": {
+            "cellColWidth": 7000
+          }
+        },
+        {
+          "val": 0,
+          "opts": {
+            "cellColWidth": 7000
+          }
+        }
+      ]
+    ],
+    "opt": {
+      "tableColWidth": 20000,
+      "align": "left",
+      "tableSize": 24,
+      "tableAlign": "left",
+      "borders": true,
+      "tableFontFamily": "Calibri",
+      "tableColor": "525353"
+    }
+  }
+]
