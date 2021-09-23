@@ -376,7 +376,7 @@ const getJSONForSalesRejectsBreakdown = (creditNote) => {
 
   const data = [
     { type: "text", val: "SALES REJECTS BREAKDOWN", opt: { bold: true, font_size: 14 }, lopt: { align: "center" } },
-    { type: "table", val: rejectsTable, opt: { borders: false } },
+    { type: "table", val: rejectsTable, opt: { borders: false, tableFontFamily: "Calibri" } },
   ];
   return data;
 };
