@@ -1,4 +1,3 @@
-const fs = require("fs");
 const getDetailsTable = (data) => [
   [
     {
@@ -156,27 +155,27 @@ const tableRow = (index, desc, qty, unit, price, amount) => {
   return [
     {
       val: index,
-      opts: { ...opts, cellColWidth: 2000 },
+      opts: { ...opts },
     },
     {
       val: desc,
-      opts: { ...opts, align: "left", cellColWidth: 10000 },
+      opts: { ...opts, align: "left" },
     },
     {
       val: qty,
-      opts: { ...opts, cellColWidth: 700 },
+      opts: { ...opts },
     },
     {
       val: unit,
-      opts: { ...opts, cellColWidth: 7000 },
+      opts: { ...opts },
     },
     {
       val: price,
-      opts: { ...opts, cellColWidth: 7000 },
+      opts: { ...opts },
     },
     {
       val: amount,
-      opts: { ...opts, cellColWidth: 7000 },
+      opts: { ...opts },
     },
   ];
 };
@@ -186,7 +185,7 @@ const getJsonForCreditNoteDocx = (creditNote) => {
     const detailsTable = getDetailsTable(creditNote);
 
     const tableStyle = {
-      tableColWidth: 20000,
+      // tableColWidth: 20000,
       align: "left",
       tableSize: 24,
       tableAlign: "left",
@@ -213,23 +212,23 @@ const getJsonForCreditNoteDocx = (creditNote) => {
       },
       {
         val: "Description",
-        opts: { ...darkOpts, cellColWidth: 10000 },
+        opts: { ...darkOpts, cellColWidth: 20000 },
       },
       {
         val: "Qty",
-        opts: { ...darkOpts, cellColWidth: 7000 },
+        opts: { ...darkOpts, cellColWidth: 4000 },
       },
       {
         val: "UOM",
-        opts: { ...darkOpts, cellColWidth: 7000 },
+        opts: { ...darkOpts, cellColWidth: 4000 },
       },
       {
         val: "U/Price (MYR)",
-        opts: { ...darkOpts, cellColWidth: 7000 },
+        opts: { ...darkOpts, cellColWidth: 4000 },
       },
       {
         val: "Amount (MYR)",
-        opts: { ...darkOpts, cellColWidth: 7000 },
+        opts: { ...darkOpts, cellColWidth: 4000 },
       },
     ];
 
