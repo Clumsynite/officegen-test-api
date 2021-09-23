@@ -1,3 +1,5 @@
+const { LOGO } = require("./constants");
+
 const getDetailsTable = (data) => [
   [
     {
